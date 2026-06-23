@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
@@ -38,25 +38,6 @@ const LoadingScreen = () => (
 export default function App() {
   const location = useLocation();
 
-  // 🔥 FIX: prevent GitHub Pages scroll restoration issue
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    // stop browser from restoring old scroll (IMPORTANT)
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    // force scroll to top before UI shows
-    window.scrollTo(0, 0);
-
-    const timeoutId = window.setTimeout(() => setReady(true), 0);
-    return () => window.clearTimeout(timeoutId);
-  }, []);
-
-  // prevent first render at footer
-  if (!ready) return null;
-
   return (
     <div className="min-h-screen bg-dark-bg text-gray-300 flex flex-col justify-between selection:bg-blue-600/30 selection:text-white">
       {/* Scroll to Top helper on route change */}
@@ -68,7 +49,7 @@ export default function App() {
       {/* Main Content Area */}
       <main className="flex-grow">
         <Suspense fallback={<LoadingScreen />}>
-          <AnimatePresence mode="wait" initial={false}>
+          <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route
                 path="/"
@@ -78,7 +59,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/services/web-development"
                 element={
@@ -87,7 +67,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/services/mobile-development"
                 element={
@@ -96,7 +75,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/services/admin-dashboards"
                 element={
@@ -105,7 +83,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/services/saas-development"
                 element={
@@ -114,7 +91,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/fitgencore"
                 element={
@@ -123,7 +99,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/about"
                 element={
@@ -132,7 +107,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/careers"
                 element={
@@ -141,7 +115,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/contact"
                 element={
@@ -150,7 +123,6 @@ export default function App() {
                   </PageTransition>
                 }
               />
-
               <Route
                 path="/privacy"
                 element={

@@ -4,11 +4,6 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 
-// 🔥 STOP browser from restoring old scroll position
-if ("scrollRestoration" in window.history) {
-  window.history.scrollRestoration = "manual";
-}
-
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
