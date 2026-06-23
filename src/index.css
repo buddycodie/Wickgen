@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+
+  --color-dark-bg: #030712; /* Deep modern dark */
+  --color-dark-card: #0b0f19;
+  --color-dark-border: rgba(255, 255, 255, 0.08);
+  --color-brand-blue: #2563eb;
+  --color-brand-cyan: #06b6d4;
+  --color-brand-violet: #8b5cf6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-dark-bg);
+    color: #f3f4f6;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030712;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+  }
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(3, 7, 18, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card {
+  background: rgba(11, 15, 25, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.15);
+  transform: translateY(-2px);
+}
+
+.glass-input {
+  background: rgba(11, 15, 25, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f3f4f6;
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Typography Utilities */
+.gradient-text-blue {
+  background: linear-gradient(135deg, #ffffff 30%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-rainbow {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid overlay background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(37, 99, 235, 0.12) 0%,
+    transparent 60%
+  );
+}
+
+/* Map Style override for Dark Mode */
+.leaflet-container {
+  background: #030712 !important;
+}
+.leaflet-tile {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) !important;
+}
+
+/* Page transitions utility */
+.page-container {
+  min-height: calc(100vh - 80px); /* Adjust based on navbar height */
+}
+
+.fitgencore-card-hover-border {
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background: 
+    linear-gradient(var(--color-dark-card), var(--color-dark-card)) padding-box, 
+    linear-gradient(var(--color-dark-border), var(--color-dark-border)) border-box;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fitgencore-card-hover-border:hover {
+  background: 
+    linear-gradient(var(--color-dark-card), var(--color-dark-card)) padding-box, 
+    linear-gradient(135deg, #ffffff 0%, #1e40af 100%) border-box;
+  box-shadow: 0 10px 30px -10px rgba(30, 64, 175, 0.3);
+  transform: translateY(-2px);
+}
+
