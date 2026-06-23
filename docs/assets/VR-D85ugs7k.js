@@ -1,0 +1,1 @@
+import{i as e}from"./index-DN4uFqbQ.js";var t=e(`arrow-right`,[[`path`,{d:`M5 12h14`,key:`1ays0h`}],[`path`,{d:`m12 5 7 7-7 7`,key:`xquz4c`}]]),n=`/Wickgen/assets/VR-DrRicXjQ.jpg`;export{t as n,n as t};
