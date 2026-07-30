@@ -172,7 +172,6 @@
   color: #ffffff !important;
 }
 
-
 .bg-white p,
 .bg-slate-50 p {
   color: #475569 !important; /* slate-600 */
@@ -185,7 +184,6 @@
 .bg-slate-50 p.text-gray-400 {
   color: #9ca3af !important; /* light gray */
 }
-
 
 /* Glass inputs inside light containers */
 .bg-white .glass-input,
@@ -262,5 +260,7 @@
 button.bg-blue-600:hover {
   box-shadow: 0 0 15px rgba(30, 64, 175, 0.5) !important;
 }
+
+
 
 

@@ -47,17 +47,17 @@ const featuredServices = [
 
 const benefits = [
   {
-    icon: <Zap className="h-6 w-6 text-blue-500" />,
+    icon: <Zap className="h-6 w-6 text-blue-600" />,
     title: "High Performance",
     desc: "Optimized digital experiences built for speed, smooth performance, and seamless user interaction across every platform.",
   },
   {
-    icon: <Shield className="h-6 w-6 text-cyan-400" />,
+    icon: <Shield className="h-6 w-6 text-cyan-600" />,
     title: "Robust Security",
     desc: "Secure and reliable systems developed with modern standards, protected infrastructure, and performance-focused architecture.",
   },
   {
-    icon: <HeartHandshake className="h-6 w-6 text-purple-400" />,
+    icon: <HeartHandshake className="h-6 w-6 text-purple-600" />,
     title: "Agile & Collaborative",
     desc: "Efficient development workflows, transparent communication, and a collaborative approach focused on delivering quality results.",
   },
@@ -346,13 +346,13 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="relative border-t border-dark-border/40 py-24 bg-[#030712] w-full text-white">
+      <section className="relative border-t border-slate-200 py-24 bg-white w-full text-slate-800">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight">
               Why Choose WickGen?
             </h2>
-            <p className="text-gray-400 text-base md:text-lg">
+            <p className="text-slate-600 text-base md:text-lg">
               We build reliable digital solutions with a focus on quality,
               innovation, and long-term business growth.
             </p>
@@ -362,15 +362,15 @@ export default function Home() {
             {benefits.map((benefit) => (
               <div
                 key={benefit.title}
-                className="p-6 rounded-2xl bg-[#0b0f19] border border-dark-border/40 hover:bg-[#0b0f19]/80 hover:border-slate-800/60 transition-all"
+                className="p-6 rounded-2xl bg-slate-50 border border-slate-200/60 hover:bg-white hover:shadow-xl hover:border-blue-500/20 transition-all duration-300"
               >
-                <div className="mb-4 bg-white/5 w-max p-3 rounded-lg border border-white/5 text-white">
+                <div className="mb-4 bg-slate-100 w-max p-3 rounded-lg border border-slate-200/60">
                   {benefit.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {benefit.desc}
                 </p>
               </div>
