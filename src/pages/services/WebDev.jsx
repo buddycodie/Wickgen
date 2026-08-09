@@ -10,7 +10,7 @@ import {
   Key,
   ArrowRight,
 } from "lucide-react";
-import vrImg from "../../assets/VR.jpg";
+import vrImg from "../../assets/eco_bg.jpg";
 
 const frontendFeatures = [
   {
@@ -269,12 +269,12 @@ export default function WebDev() {
 
       {/* CTA Section */}
       <section className="relative border-t border-dark-border/40 py-24 bg-gradient-to-r from-blue-900/10 via-dark-bg to-cyan-950/10 overflow-hidden mt-16">
-        {/* Background Graphic Image (VR.jpg) */}
-        <div className="absolute inset-0 pointer-events-none select-none z-0 opacity-15 overflow-hidden mix-blend-screen">
+        {/* Background Graphic Image (eco_bg.jpg) */}
+        <div className="absolute inset-0 pointer-events-none select-none z-0 opacity-40 overflow-hidden">
           <img src={vrImg} alt="" className="w-full h-full object-cover" />
           {/* Gradient overlays to blend edges */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-[#030712] opacity-95" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#030712] via-transparent to-[#030712] opacity-95" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#010104] via-transparent to-[#010104] opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#010104] via-transparent to-[#010104] opacity-100" />
         </div>
 
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6 relative z-10">
