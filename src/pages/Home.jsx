@@ -10,7 +10,6 @@ import {
   Shield,
   HeartHandshake,
 } from "lucide-react";
-import rvImg from "../assets/eco_robot.jpg";
 import vrImg from "../assets/eco_bg.jpg";
 import earthImg from "../assets/earth_blue.jpg";
 import fitGenCoreLogo from "../assets/fitgencoree.png";
@@ -74,30 +73,6 @@ const titleWords = [
   { text: "future", isGradient: true },
   { text: "scales.", isGradient: true },
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.12, delayChildren: 0.1 * i },
-  }),
-};
-
-const childVariants = {
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 12,
-      stiffness: 100,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-};
 
 const servicesContainerVariants = {
   hidden: { opacity: 0 },
